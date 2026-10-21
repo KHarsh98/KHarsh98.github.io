@@ -1,0 +1,315 @@
+<title>Kumar Harsh</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Kumar Harsh, software engineer building multi-tenant cloud platforms and agentic AI systems.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single left-aligned column, hero pairs a thesis with a fact sheet of real production numbers; experience reads as a dated ledger. */
+:root{
+  --bg:#F1F3F6; --surface:#FFFFFF; --ink:#131C28; --muted:#566273; --line:#D5DBE3; --accent:#2343C9; --accent-soft:#E3E8FB;
+  --f-display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --f-body:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D131B; --surface:#141C27; --ink:#E5EAF1; --muted:#95A2B4; --line:#253140; --accent:#86A0FF; --accent-soft:#1B2647; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D131B; --surface:#141C27; --ink:#E5EAF1; --muted:#95A2B4; --line:#253140; --accent:#86A0FF; --accent-soft:#1B2647; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.6;}
+.wrap{max-width:1040px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px));}
+a{color:var(--accent); text-underline-offset:3px}
+a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+h1,h2,h3{font-family:var(--f-display); text-wrap:balance; margin:0; letter-spacing:-0.01em}
+.label{font-family:var(--f-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+
+/* nav */
+.top{display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; padding-block:22px; border-bottom:1px solid var(--line)}
+.mark{font-family:var(--f-display); font-weight:800; font-size:18px; color:var(--ink); text-decoration:none}
+.top nav{display:flex; gap:20px; flex-wrap:wrap}
+.top nav a{color:var(--muted); text-decoration:none; font-size:14px; font-weight:500}
+.top nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr); gap:48px; padding-block:64px 56px; align-items:end}
+.hero h1{font-size:clamp(44px, 8vw, 88px); font-weight:800; line-height:.95; letter-spacing:-0.03em}
+.hero .role{font-family:var(--f-display); font-weight:500; font-size:clamp(20px, 2.6vw, 26px); line-height:1.3; margin-top:22px; max-width:30ch}
+.hero .role em{font-style:normal; color:var(--accent)}
+.hero p.lede{color:var(--muted); max-width:56ch; margin:18px 0 0}
+.status{display:inline-flex; align-items:center; gap:8px; margin-top:26px; font-family:var(--f-mono); font-size:13px; background:var(--accent-soft); color:var(--ink); padding:6px 12px; border-radius:999px}
+.status i{width:8px; height:8px; border-radius:50%; background:#1F9D55; display:block}
+.ctas{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px}
+.btn{font:600 15px var(--f-body); padding:11px 18px; border-radius:8px; border:1px solid var(--ink); background:var(--ink); color:var(--bg); text-decoration:none; cursor:pointer}
+.btn.ghost{background:transparent; color:var(--ink); border-color:var(--line)}
+.btn:hover{opacity:.88}
+
+.facts{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:22px 24px}
+.facts dl{margin:14px 0 0; display:grid; gap:14px}
+.facts div{display:grid; grid-template-columns:7.5em 1fr; gap:14px; align-items:baseline; padding-top:14px; border-top:1px solid var(--line)}
+.facts div:first-child{border-top:0; padding-top:0}
+.facts dt{font-family:var(--f-display); font-weight:700; font-size:28px; line-height:1; font-variant-numeric:tabular-nums}
+.facts dd{margin:0; color:var(--muted); font-size:14px; line-height:1.4}
+
+/* sections */
+section{padding-block:56px; border-top:1px solid var(--line)}
+.sec-head{display:grid; grid-template-columns:200px minmax(0,1fr); gap:32px}
+.sec-head h2{font-size:28px; font-weight:700}
+.sec-head .label{display:block; margin-top:8px}
+
+/* experience ledger */
+.jobs{display:grid; gap:40px}
+.job{display:grid; grid-template-columns:200px minmax(0,1fr); gap:32px}
+.job .when{font-family:var(--f-mono); font-size:13px; color:var(--muted); font-variant-numeric:tabular-nums; line-height:1.5}
+.job .when b{display:block; color:var(--ink); font-weight:500}
+.job h3{font-size:22px; font-weight:700}
+.job .co{color:var(--muted); font-size:15px; margin-top:2px}
+.job ul{margin:14px 0 0; padding-left:18px; display:grid; gap:8px; max-width:68ch}
+.job li::marker{color:var(--accent)}
+.sub{margin-top:22px}
+.sub h4{font:600 15px var(--f-body); margin:0}
+.sub h4 span{font-family:var(--f-mono); font-weight:400; font-size:13px; color:var(--muted); margin-left:8px}
+.chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px}
+.chip{font-family:var(--f-mono); font-size:12px; padding:3px 9px; border:1px solid var(--line); border-radius:6px; color:var(--muted); background:var(--surface)}
+
+/* projects */
+.projects{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:16px}
+.proj{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:22px; display:flex; flex-direction:column; gap:10px}
+.proj.wide{grid-column:1 / -1}
+.proj h3{font-size:20px; font-weight:700}
+.proj .kind{font-family:var(--f-mono); font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:.06em}
+.proj p{margin:0; color:var(--muted); font-size:15px}
+.proj .chips{margin-top:auto; padding-top:6px}
+
+/* skills */
+.skills{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px 40px}
+.skills h3{font:600 15px var(--f-body); margin-bottom:10px}
+.skills .chips{margin-top:0}
+
+/* education */
+.edu{display:grid; gap:28px}
+.edu .row{display:grid; grid-template-columns:minmax(0,1fr) auto; gap:4px 24px}
+.edu h3{font-size:20px; font-weight:700}
+.edu .when{font-family:var(--f-mono); font-size:13px; color:var(--muted); text-align:right}
+.edu p{margin:0; color:var(--muted)}
+.certs{margin:0; padding-left:18px; display:grid; gap:6px}
+
+/* contact */
+.contact h2{font-size:clamp(30px, 5vw, 48px); font-weight:800; letter-spacing:-0.02em; max-width:18ch}
+.contact p{color:var(--muted); max-width:56ch}
+.mailrow{display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:22px}
+.mail{font-family:var(--f-mono); font-size:clamp(16px, 2.4vw, 20px); background:var(--surface); border:1px solid var(--line); padding:10px 14px; border-radius:8px; user-select:all; word-break:break-all}
+footer{padding-block:28px 40px; border-top:1px solid var(--line); color:var(--muted); font-size:13px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr; gap:36px; padding-block:44px}
+  .sec-head, .job{grid-template-columns:1fr; gap:10px}
+  .sec-head{gap:20px}
+  .projects, .skills{grid-template-columns:1fr}
+  .proj.wide{grid-column:auto}
+  .edu .row{grid-template-columns:1fr}
+  .edu .when{text-align:left}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn, .top nav a{transition:opacity .15s, color .15s}
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="mark" href="#top">Kumar Harsh</a>
+    <nav aria-label="Sections">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="top">
+    <div>
+      <h1>Kumar<br>Harsh</h1>
+      <p class="role">Software engineer building <em>multi-tenant cloud platforms</em> and <em>agentic AI systems</em>.</p>
+      <p class="lede">About three years across startups and consulting, from migrating petabytes of medical imaging on AWS to shipping RAG pipelines with LangChain and LangGraph. MS in Software Engineering from San José State University.</p>
+      <span class="status"><i></i>Open to full-time and freelance work</span>
+      <div class="ctas">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn ghost" href="#projects">See projects</a>
+      </div>
+    </div>
+    <aside class="facts" aria-label="Selected results">
+      <span class="label">In production</span>
+      <dl>
+        <div><dt>9 PB</dt><dd>of high-resolution medical scans migrated on a Java Spring Boot pipeline I architected</dd></div>
+        <div><dt>1M+</dt><dd>scans moved per day at peak throughput</dd></div>
+        <div><dt>100K+</dt><dd>tenants supported by DynamoDB schemas I designed</dd></div>
+        <div><dt>30%</dt><dd>infrastructure cost cut on an Azure compute engine refactor</dd></div>
+      </dl>
+    </aside>
+  </div>
+
+  <section id="experience">
+    <div class="sec-head">
+      <div><h2>Experience</h2><span class="label">2021 to 2025</span></div>
+      <div class="jobs">
+
+        <article class="job" style="grid-template-columns:1fr; gap:0">
+          <div class="when"><b>Jun 2025 – Aug 2025</b>Remote, USA</div>
+          <h3 style="margin-top:8px">Full Stack Developer Intern</h3>
+          <div class="co">Find Me LLC</div>
+          <ul>
+            <li>Architected a multi-tenant AI SaaS platform on React, TypeScript, Express.js, MongoDB and Azure Functions, with an agentic RAG pipeline (LangChain, LangGraph) that generates personalized content across 20+ portfolio templates.</li>
+            <li>Cut development effort per template by about 50% with a modular REST API built on Express.js, TypeScript and Mongoose discriminators, backed by a vector database for real-time similarity search.</li>
+            <li>Led a 15+ member backend team on high-availability cloud architecture and LLM integration strategy, mentoring junior engineers and aligning roadmaps with cross-functional stakeholders.</li>
+            <li>Reviewed 30 pull requests for security and coding standards, and built a GitLab CI/CD pipeline that runs tests before every merge.</li>
+          </ul>
+          <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Express.js</span><span class="chip">MongoDB</span><span class="chip">Azure Functions</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">GitLab CI</span></div>
+        </article>
+
+        <article class="job" style="grid-template-columns:1fr; gap:0">
+          <div class="when"><b>May 2023 – May 2024</b>Remote, India</div>
+          <h3 style="margin-top:8px">Software Engineer</h3>
+          <div class="co">Proximise.in</div>
+          <ul>
+            <li>Engineered a scalable analytics platform from scratch on Redshift, Redis, Kinesis and QuickSight.</li>
+            <li>Designed multi-tenant database schemas in AWS DynamoDB supporting 100K+ tenants.</li>
+            <li>Delivered 10+ end-to-end features for an AWS-distributed SaaS product with React, Redux, Node.js, TypeScript, GraphQL and AWS Amplify, covered by Jest unit tests.</li>
+            <li>Refactored the communication module with functional JavaScript to send WhatsApp Business messages via webhook across 3 integration points, and rebuilt the message editor as a rich-text editor on Slate.js.</li>
+            <li>Reviewed 20 pull requests for security and coding standards.</li>
+          </ul>
+          <div class="chips"><span class="chip">AWS</span><span class="chip">DynamoDB</span><span class="chip">Redshift</span><span class="chip">Kinesis</span><span class="chip">GraphQL</span><span class="chip">React / Redux</span><span class="chip">Node.js</span></div>
+        </article>
+
+        <article class="job" style="grid-template-columns:1fr; gap:0">
+          <div class="when"><b>Jul 2021 – May 2023</b>Bangalore, India</div>
+          <h3 style="margin-top:8px">Kickdrum</h3>
+          <div class="co">Technology consultancy improving scalability and efficiency for client businesses</div>
+          <div class="sub">
+            <h4>Software Engineer <span>Aug 2022 – May 2023</span></h4>
+            <ul>
+              <li>Led the architecture of a distributed Java Spring Boot application on AWS that migrated 9 PB of high-resolution medical scans, scaling to 1M+ scans per day with concurrent streaming transfers.</li>
+              <li>Reduced infrastructure costs by 30% by refactoring a legacy C# On-Demand Compute Engine onto Azure VM Scale Sets with APM.</li>
+              <li>Led and mentored 2 teams of junior developers through sprint planning and Scrum on a 3-month project.</li>
+            </ul>
+          </div>
+          <div class="sub">
+            <h4>Software Developer <span>Jul 2021 – Jul 2022</span></h4>
+            <ul>
+              <li>Raised Elasticsearch indexing accuracy from 60% to 90% for a private-equity analytics engine by reworking parsing of inconsistent Google Docs and Slides inside Lambda and API Gateway pipelines.</li>
+              <li>Built a full-stack Electron.js CRM that cut processing time by 50%, with React Hooks, Context, MUI theming and Sentry logging.</li>
+              <li>Cut customer account setup from 2 weeks to 3 days with CloudFormation and Control Tower: Organizational Units, guardrails, IAM Identity Center (SSO) and Account Factory.</li>
+            </ul>
+          </div>
+          <div class="chips"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">AWS</span><span class="chip">Azure</span><span class="chip">C#</span><span class="chip">Elasticsearch</span><span class="chip">CloudFormation</span><span class="chip">Electron.js</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sec-head">
+      <div><h2>Projects</h2><span class="label">Independent work</span></div>
+      <div class="projects">
+        <article class="proj wide">
+          <span class="kind">Security · Real-time</span>
+          <h3>VigilZone</h3>
+          <p>A secure, multi-tenant smart surveillance platform. AI-generated anomaly events flow through role-based access control, and a real-time alert system on Django Channels and Redis pushes notifications to user dashboards within milliseconds of detection.</p>
+          <div class="chips"><span class="chip">Django REST Framework</span><span class="chip">React</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">Django Channels</span><span class="chip">JWT</span></div>
+        </article>
+        <article class="proj">
+          <span class="kind">Agentic AI</span>
+          <h3>Job Agentic AI Tracker</h3>
+          <p>A personal multi-agent workflow that scrapes job listings, ranks them by fit, and tailors resumes to each role, cutting the time spent per application.</p>
+          <div class="chips"><span class="chip">Ollama</span><span class="chip">Python</span><span class="chip">Multi-agent</span></div>
+        </article>
+        <article class="proj">
+          <span class="kind">Computer vision</span>
+          <h3>Waylo</h3>
+          <p>Object detection with a YOLO v1 implementation written from scratch and trained on real Waymo driving data.</p>
+          <div class="chips"><span class="chip">Python</span><span class="chip">Deep learning</span><span class="chip">YOLO</span></div>
+        </article>
+        <article class="proj">
+          <span class="kind">Full stack</span>
+          <h3>CRM</h3>
+          <p>A working CRM with a dashboard that updates as data changes, and a documented API with filtering, pagination and sorting.</p>
+          <div class="chips"><span class="chip">Django REST Framework</span><span class="chip">React Admin</span></div>
+        </article>
+        <article class="proj">
+          <span class="kind">Full stack</span>
+          <h3>Yelp Clone</h3>
+          <p>Search and rate restaurants with written reviews, with Google Maps markers showing each restaurant on an embedded map.</p>
+          <div class="chips"><span class="chip">Google Maps API</span><span class="chip">Full stack</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head">
+      <div><h2>Skills</h2><span class="label">Tools I ship with</span></div>
+      <div class="skills">
+        <div><h3>Languages</h3><div class="chips"><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">C#</span><span class="chip">SQL</span></div></div>
+        <div><h3>Frameworks</h3><div class="chips"><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">Django / DRF</span><span class="chip">Spring Boot</span><span class="chip">GraphQL</span></div></div>
+        <div><h3>Cloud</h3><div class="chips"><span class="chip">AWS: S3, RDS, DynamoDB, EC2, VPC, Lambda</span><span class="chip">OpenSearch</span><span class="chip">Azure</span><span class="chip">Docker</span></div></div>
+        <div><h3>Data</h3><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Redshift</span><span class="chip">Vector DBs</span></div></div>
+        <div><h3>AI</h3><div class="chips"><span class="chip">Agentic and multi-agent workflows</span><span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">Ollama</span></div></div>
+        <div><h3>Practice</h3><div class="chips"><span class="chip">System design</span><span class="chip">Microservices</span><span class="chip">CI/CD</span><span class="chip">Scrum / Kanban</span><span class="chip">Git, GitHub, GitLab</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="sec-head">
+      <div><h2>Education</h2><span class="label">Degrees and certificates</span></div>
+      <div class="edu">
+        <div class="row">
+          <h3>San José State University</h3><span class="when">Aug 2024 – May 2026</span>
+          <p>MS, Software Engineering · Specialization in Enterprise Software Technologies</p>
+        </div>
+        <div class="row">
+          <h3>Manipal Institute of Technology</h3><span class="when">Karnataka, India</span>
+          <p>BTech, Information Technology · Minor in Big Data</p>
+        </div>
+        <div>
+          <span class="label">Certifications</span>
+          <ul class="certs" style="margin-top:10px">
+            <li>Agentic AI, DeepLearning.AI (Andrew Ng)</li>
+            <li>Deep Learning Specialization, DeepLearning.AI (Andrew Ng)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Have a platform to build or scale?</h2>
+    <p>I take on full-stack builds, cloud architecture, and AI agent work, and I'm open to full-time engineering roles. Email is the fastest way to reach me.</p>
+    <div class="mailrow">
+      <span class="mail" id="mail">kumar.harsh@sjsu.edu</span>
+      <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+  </section>
+
+  <footer>
+    <span>Kumar Harsh</span>
+    <span>Software Engineer</span>
+  </footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var btn = this, text = document.getElementById('mail').textContent;
+  function done(){ btn.textContent = 'Copied'; setTimeout(function(){ btn.textContent = 'Copy email'; }, 1600); }
+  function fallback(){
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = 'Selected, press Ctrl+C';
+  }
+  try { navigator.clipboard.writeText(text).then(done, fallback); } catch(e){ fallback(); }
+});
+</script>
